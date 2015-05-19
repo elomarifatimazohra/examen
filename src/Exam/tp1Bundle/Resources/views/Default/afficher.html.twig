@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <h1 style="font-size: 50px;margin-left: 750px">+</h1>
+    <h1 style="color:#565656;text-align: center; text-decoration: underline">Listes Taches 2015</h1>
+    <table border="0" style="border-collapse: collapse;margin-left: 33%">
+        {% for p in Tache %}
+        <tr style="width: 100px;text-align: center"  >
+            <td>
+           <ul>A faire
+           <li style="width: 100px;text-align: center">{{ p.titre }}</li>
+
+           </ul>
+</td></tr>
+
+
+
+
+
+
+        {% endfor %}
+
+
+
+
+    </table>
+{% endblock %}
