@@ -140,13 +140,13 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'exam_tp1_default_index')), array (  '_controller' => 'Exam\\tp1Bundle\\Controller\\DefaultController::indexAction',));
         }
 
-        // exam_tp1_default_ajouter
+        // Ajouter
         if (rtrim($pathinfo, '/') === '/Ajouter') {
             if (substr($pathinfo, -1) !== '/') {
-                return $this->redirect($pathinfo.'/', 'exam_tp1_default_ajouter');
+                return $this->redirect($pathinfo.'/', 'Ajouter');
             }
 
-            return array (  '_controller' => 'Exam\\tp1Bundle\\Controller\\DefaultController::ajouterAction',  '_route' => 'exam_tp1_default_ajouter',);
+            return array (  '_controller' => 'Exam\\tp1Bundle\\Controller\\DefaultController::ajouterAction',  '_route' => 'Ajouter',);
         }
 
         // afficher
@@ -156,6 +156,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             }
 
             return array (  '_controller' => 'Exam\\tp1Bundle\\Controller\\DefaultController::afficherAction',  '_route' => 'afficher',);
+        }
+
+        // consulter
+        if (0 === strpos($pathinfo, '/consulter') && preg_match('#^/consulter/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'consulter')), array (  '_controller' => 'Exam\\tp1Bundle\\Controller\\DefaultController::ConsulterAction',));
         }
 
         // _welcome

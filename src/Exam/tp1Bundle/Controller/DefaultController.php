@@ -18,7 +18,7 @@ class DefaultController extends Controller
         return array('name' => $name);
     }
     /**
-     * @Route("/Ajouter/  ")
+     * @Route("/Ajouter/ ", name="Ajouter")
      * @Template()
      */
     public function ajouterAction(\Symfony\Component\HttpFoundation\Request $request)
@@ -61,6 +61,26 @@ class DefaultController extends Controller
 
         return array('Tache' => $tache );
     }
+    /**
+     * @Route("/consulter/{id} " , name="consulter")
+     * @Template()
+     */
+    public function ConsulterAction($id)
+    {
+        $p= new Tache();
+
+
+
+
+        $em = $this->getDoctrine()->getManager();
+        $tache = $em->getRepository('tacheBundle:Tache')->findOneBy(array('id' => $id));
+
+
+
+
+        return array('Tache' => $tache ,'id'=>$id);
+    }
+
 
 
 

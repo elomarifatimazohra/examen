@@ -28,12 +28,15 @@ class __TwigTemplate_4a1d5703efcba9344cd0664c3b4abf339a205c82c4184f0b926920a4109
     public function block_body($context, array $blocks = array())
     {
         // line 4
-        echo "
+        echo "    <div style=\"margin-left:540px;width:200px;margin-top: 50px;height: 400px;padding-left: 16px;background-color: #868686;border-radius:30px;border:solid #000000\" >
+        <br><br>
+        <h1 style=\"\">TODO.COM</h1>
     ";
-        // line 5
-        echo         $this->env->getExtension('form')->renderer->renderBlock((isset($context["f"]) ? $context["f"] : $this->getContext($context, "f")), 'form');
+        // line 7
+        echo         $this->env->getExtension('form')->renderer->renderBlock($this->getContext($context, "f"), 'form');
         echo "
 
+</div>
 ";
     }
 
@@ -49,6 +52,6 @@ class __TwigTemplate_4a1d5703efcba9344cd0664c3b4abf339a205c82c4184f0b926920a4109
 
     public function getDebugInfo()
     {
-        return array (  34 => 5,  31 => 4,  28 => 3,);
+        return array (  36 => 7,  31 => 4,  28 => 3,);
     }
 }

@@ -31,19 +31,19 @@ class __TwigTemplate_54596e198a1c77173713bfc101c8d54808e9f66e8511a6b4e82382e9801
         ";
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 7
+        // line 11
         echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("favicon.ico"), "html", null, true);
         echo "\" />
     </head>
     <body>
         ";
-        // line 10
+        // line 14
         $this->displayBlock('body', $context, $blocks);
-        // line 11
+        // line 15
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 12
+        // line 16
         echo "    </body>
 </html>
 ";
@@ -58,14 +58,22 @@ class __TwigTemplate_54596e198a1c77173713bfc101c8d54808e9f66e8511a6b4e82382e9801
     // line 6
     public function block_stylesheets($context, array $blocks = array())
     {
+        // line 7
+        echo "
+            <link rel=\"stylesheet\" href=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("bundles/tacheaBundle/css/style.css"), "html", null, true);
+        echo "\" />
+
+        ";
     }
 
-    // line 10
+    // line 14
     public function block_body($context, array $blocks = array())
     {
     }
 
-    // line 11
+    // line 15
     public function block_javascripts($context, array $blocks = array())
     {
     }
@@ -82,6 +90,6 @@ class __TwigTemplate_54596e198a1c77173713bfc101c8d54808e9f66e8511a6b4e82382e9801
 
     public function getDebugInfo()
     {
-        return array (  69 => 11,  64 => 10,  59 => 6,  53 => 5,  47 => 12,  44 => 11,  42 => 10,  35 => 7,  33 => 6,  29 => 5,  23 => 1,  34 => 5,  31 => 4,  28 => 3,);
+        return array (  77 => 15,  72 => 14,  65 => 8,  62 => 7,  59 => 6,  53 => 5,  47 => 16,  44 => 15,  42 => 14,  35 => 11,  33 => 6,  29 => 5,  23 => 1,);
     }
 }
